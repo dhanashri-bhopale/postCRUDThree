@@ -1,0 +1,24 @@
+
+.list-group-item {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #3f51b5;
+  transition: width 0.3s ease-in-out;
+}
+
+.list-group-item:hover::before {
+  width: 5px;
+}
+
+.list-group-item:hover {
+  background-color: #f1f3ff;
+}

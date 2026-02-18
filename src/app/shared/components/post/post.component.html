@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-6 offset-md-3 text-right">
+            <button routerLink="/posts" mat-raised-button color="primary"><u>Go To DashBoard</u></button>
+        </div>
+    </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card mat-elevation-z4">
+        <div class="card-body">
+          <h2>
+            {{ postObj.title }}
+          </h2>
+          <hr />
+          <p>
+            {{ postObj.content }}
+          </p>
+
+          <div class="d-flex">
+            <button routerLink="edit" class="flex-grow-1" mat-raised-button color="accent">Edit</button>
+            <button (click)="onRemove()" class="flex-grow-1" mat-raised-button color="warn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
